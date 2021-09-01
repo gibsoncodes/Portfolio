@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Skills from './components/Skills';
+import Projects from './components/Projects/Projects';
+import Me from './components/Me';
+import Header from './components/Projects/Header'
+import {useState} from 'react';
 
 function App() {
+  const [info, setInfo] = useState(false)
+  const [dark, setDark] = useState(false)
+  let leftId = dark ? "dark-skills" : null;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header dark={dark} info={info}/>
+            <div id={leftId} className="content">
+                <Projects dark={dark} setDark={setDark}/>
+                <Skills dark={dark} setInfo={setInfo}/>
+                <Me dark={dark}/>
+            </div>
+
     </div>
   );
 }
