@@ -27,7 +27,15 @@ const Projects = ({setDark, dark}) => {
             first: false,
             name: "LawnMOWA",
             image: "images/lawn.png",
-            desc: "A class assigned project taken much further. I wanted to experiment with dom-manipulated animation. Although its a slow start, I urge you to stick with it, lawn chopping gets wild.",
+            desc: (<p className="proj-desc">A class assigned project taken much further. I wanted to experiment with dom-manipulated animation. Although its a slow start, I urge you to stick with it, lawn chopping gets wild.</p>),
+            live: "https://gibsoncodes.github.io/LawnMOWA/",
+            code: "https://github.com/gibsoncodes/LawnMOWA",
+        },
+        {
+            first: false,
+            name: "Who's Up",
+            image: "images/whosup.png",
+            desc: (<p className="proj-desc">Often I find that a simple online search for food at night can be overwhelming. Who's Up puts just the essentials out and could be the difference between getting death glares upon arrival, or just slightly angry glares. Try it out yourself, courtesy of my Google Api key (thus the four mile limit).</p>),
             live: "https://gibsoncodes.github.io/LawnMOWA/",
             code: "https://github.com/gibsoncodes/LawnMOWA",
         }
@@ -38,6 +46,7 @@ const Projects = ({setDark, dark}) => {
             <div id={id} className="projects">
                 <ProjectBanner dark={dark} setDark={setDark}/>
                 <RightProject dark={dark} project={projectList[1]}/>
+                <RightProject dark={dark} project={projectList[3]}/>
                 <RightProject dark={dark} project={projectList[0]}/>
                 <RightProject dark={dark} project={projectList[2]}/>
             </div>

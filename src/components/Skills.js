@@ -1,14 +1,15 @@
 import React from 'react'
 
-const Skills = ({setInfo}) => {
+const Skills = () => {
     return (
-        <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className="skills">
-            <img className="skill firstSkill" src="images/git.png" alt="git"></img>
-            <img className="skill" src="images/jsicon.png" alt="git"></img>
-            <img className="skill" id="react" src="images/react2.png" alt="git"></img>
-            <img className="skill" id="mongo" src="images/mongo2.png" alt="git"></img>
-            <img className="skill" id="node" src="images/truenode.png" alt="git"></img>
-            <img className="skill" src="images/tscript.png" alt="git"></img>
+        <div className="skills">
+            <img className="skill firstSkill" src="images/tryouts/git.svg" alt="git"></img>
+            <img className="skill" id="js" src="images/tryouts/js.svg" alt="git"></img>
+            <img className="skill"  id="react" src="images/tryouts/react.svg" alt="git"></img>
+            <img className="skill"  id="mongo" src="images/tryouts/mongo.svg" alt="git"></img>
+            <img className="skill"  src="images/tryouts/node.svg" alt="git"></img>
+            <img className="skill" id="django" src="images/tryouts/django.svg" alt="git"></img>
+            <img className="skill" src="images/ts.png" alt="git"></img>
             <img className="skill" src="images/swift.png" alt="git"></img>
         </div>
     )

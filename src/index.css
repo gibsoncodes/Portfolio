@@ -11,9 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    /* font-family: 'Nanum Gothic', sans-serif; */
-}
 * {
     margin: 0;
     padding: 0;
@@ -22,21 +19,10 @@ code {
 
 .content {
     box-sizing: border-box;
-    border-left: solid rgba(213, 225, 232, 0.44) 90px;
     border-left: solid rgb(184, 195, 205) 90px;
     width: 100%;
 }
 
-.about {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 50%;
-    padding: 20px 10px;
-    border-left: solid black 2px;
-    border-right: solid black 2px;
-    margin-bottom: 20px;
-}
 
 
 .skills {
@@ -59,8 +45,8 @@ code {
 .me {
     display: block;
     background-color: whitesmoke;
-    padding: 40px 0;
-    z-index: 5;
+    padding-top: 40px;
+    padding-bottom: 100px;
 }
 
 .contactLinks {
@@ -183,13 +169,7 @@ a {
 .projects {
     padding-top: 200px;
     padding-bottom: 20px;
-    /* margin-top: 70px;
-    margin-right: 4px; */
-    /* background-color: rgb(249, 249, 249); */
     background-color: rgb(244, 246, 247);
-    
-    
-    /* z-index: 5; */
 }
 .first {
     margin-top: 800px;
@@ -234,17 +214,6 @@ a {
     margin-bottom: 150px;
 }
 
-.l-inner {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: grid;
-    grid-template-columns: 40% 60%;
-    width: 80%;
-    /* background-color: rgb(244, 246, 247); */
-    background-color: rgba(245, 255, 255, 0.164);
-    border: solid rgba(0, 0, 0, 0.910) 1px;
-}
 .r-inner {
     position: relative;
     left: 50%;
@@ -252,12 +221,9 @@ a {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 90%;
-    /* background-color: rgb(244, 246, 247); */
-    background-color: rgba(213, 225, 232, 0.18);
+    height: auto;
     background-color: white;
-    /* border: solid rgba(0, 0, 0, 0.192) 1px; */
     border-radius: 3px;
-    /* border-left: solid rgba(0, 0, 0, 0.884) 2px; */
 }
 .firstProject {
     margin-top: 100px;
@@ -283,7 +249,7 @@ a {
     left: 50%;
     transform: translate(-50%, 0);
     display: block;
-    padding-top: 40px;
+    padding-top: 30px;
     width: 48px;
 }
 .firstSkill {
@@ -303,16 +269,12 @@ a {
     font-weight: 800;
 }
 
-/* .rightProject .projectInfo {
-    width: 100%;
-    height: 320px;
-} */
-
 .projectImage {
-    /* border: solid 2px black; */
-    float: left;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
     width: 100%;
-    height: 350px;
+    height: auto;
     border: solid black 0px;
     opacity: .05;
 }
@@ -320,18 +282,49 @@ a {
 .projectInfo {
     margin-left: 20px;
     height: 320px;
+    line-height: 25px;
 }
 
 .projectName {
-    /* font-family: 'Quicksand', sans-serif; */
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     top: 50%;
-    /* padding-bottom: 15px; */
     width: 70%;
-    /* border-bottom: solid black 1px; */
+}
+
+.portrait-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.portrait {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.who-i-am {
+    margin-top: 20px;
+    width: 90%;
+    line-height: 27px;
+}
+
+.about {
+    margin-top: 40px;
+    width: 90%;
+}
+
+.portraitImg {
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 100%;
+    height: auto;
+    border: solid whitesmoke 5px;
 }
 
 .foo {
@@ -415,10 +408,6 @@ a {
 #dark-projs {
     background-color: rgba(144, 153, 159, 0.18);
 }
-#dark-me {
-    border-left: solid white 1px;
-    border-right: solid white 1px;
-}
 #dark-code {
     color: #dce3d5;
     border-color: white;
@@ -430,20 +419,33 @@ a {
     margin-left: 4px;
 }
 #react {
-    width: 42px;
+    width: 48px;
 }
 #mongo {
-    width: 46px;
+    width: 58px;
+}
+#js {
+    width: 40px;
+}
+#django{
+    width: 44px;
+}
+.mobile-skills {
+    display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+    .header-title {
+        padding-left: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
     .r-inner {
         display: grid;
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
-    .projectImage {
-        height: 280px;
+    .r-inner div:nth-child(2) {
+        grid-row: 1;
     }
     .content {
         border: none;
@@ -452,28 +454,68 @@ a {
         width: 100%;
     }
     .banner-title {
-        font-size: 24px;
-        margin-left: 10px;
+        font-size: 20px;
+        margin-left: 20px;
     }
     .tree {
         height: 70px;
     }
 
     .skills {
-        margin: 100px 0;
-        background-color: blanchedalmond;
-        display: block;
-        width: 100%;
+        display: none;
     }
 
-    .skill {
+    #dark-skills {
+        border: none;
+    }
+    .me {
+        padding-bottom: 0;
+    }
+    
+    .mobile-skills {
+        margin-top: 10px;
+        padding: 10px 0 20px 0;
+        background-color: rgb(128, 125, 125);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+    .mobile-skill {
+        position: relative;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        width: 48px;
+        margin-top: 10px;
+    }
+    .portrait-container {
+        display: block;
+        margin-top: 30px;
+    }
+    .portrait {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 50%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .who-i-am {
         position: relative;
         left: 50%;
         transform: translate(-50%, 0);
-        display: inline;
-        padding-top: 40px;
-        width: 48px;
+        width: 90%;
+        line-height: 27px;
     }
+    
+    .about {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90%;
+    }
+    
 
 
 }
