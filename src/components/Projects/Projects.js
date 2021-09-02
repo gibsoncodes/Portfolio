@@ -1,5 +1,4 @@
 import React from 'react'
-import LeftProject from './LeftProject'
 import RightProject from './RightProject'
 import ProjectBanner from './ProjectBanner'
 const Projects = ({setDark, dark}) => {

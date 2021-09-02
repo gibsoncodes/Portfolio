@@ -6,7 +6,6 @@ html, body {
 body {
   margin: 0;
   font-family: 'Nanum Gothic', sans-serif;
-  /* font-family: 'Oxygen', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,18 +22,14 @@ body {
     width: 100%;
 }
 
-
-
 .skills {
     position: absolute;
     left: 0;
     width: 90px;
     background-color: none;
-    /* background-color: #b2cdc3; */
-    /* border-right: solid #00000006 1px; */
-    /* border-left: solid rgb(0, 0, 0) 4px; */
     z-index: 2;
 }
+
 .tree2 {
     position: relative;
     left: 20%;
@@ -108,11 +103,10 @@ body {
 .proj-link {
     padding: 8px 20px;
     margin: 0px 6px;
-    /* background-color: rgb(244, 235, 244);
-    border: solid rgba(255, 255, 255, 0.136) 1px; */
     border: solid rgb(0, 0, 0) 1px;
     border-radius: 3px;
 }
+
 .view {
     padding-bottom: 30px;
 }
@@ -128,8 +122,8 @@ body {
     padding: 0;
     z-index: 0;
 }
+
 .header {
-    /* font-family: 'Quicksand', sans-serif; */
     position: fixed;
     width: 100%;
     top: 0;
@@ -147,20 +141,10 @@ body {
     font-size: 20px;
     line-height: 70px;
     text-align: left;
-    /* color: #f0f0f0; */
     letter-spacing: 10px;
     z-index: 2;
 }
-.gcodes {
-    float: right;
-    /* color: white; */
-    color: black;
-    font-size: 15px;
-    letter-spacing: 5px;
-    padding-right: 20px;
-    margin-top: 40px;
-    bottom: 0;
-}
+
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -176,12 +160,11 @@ a {
 }
 
 .banner {
-    /* font-family: 'Quicksand', sans-serif; */
     text-align: left;
     position: absolute;
     right: 0%;
     top: 150px;
-    width: 43%;
+    width: 49%;
     border-bottom: solid 20px black;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -194,9 +177,7 @@ a {
 }
 .banner-title {
     font-weight: 600;
-   
     display: inline;
-    /* width: 100%; */
     margin: 0;
     padding: 0;
     letter-spacing: 20px;
@@ -281,8 +262,8 @@ a {
 
 .projectInfo {
     margin-left: 20px;
-    height: 320px;
     line-height: 25px;
+    padding-bottom: 20px;
 }
 
 .projectName {
@@ -433,8 +414,23 @@ a {
 .mobile-skills {
     display: none;
 }
+.project-name-mobile {
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+    .project-name-mobile {
+        opacity: 1;
+        
+    }
+    .projectName {
+        display: none;
+    }
     .header-title {
         padding-left: 0;
         left: 50%;

@@ -37,6 +37,7 @@ const RightProject = ({project, dark}) => {
             <div id={id} className="r-inner">
             {entered ? isViewing : isntViewing}
             <div className="foo border-2">
+                {!entered ? (<h2 className="project-name-mobile">{project.name}</h2>) : null}
                 <img className={entered ? "projectImage fadeIn" : "projectImage"} src={project.image} alt="project1"></img>
             </div>
             </div>

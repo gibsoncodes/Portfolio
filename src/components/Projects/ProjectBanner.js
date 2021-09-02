@@ -13,7 +13,7 @@ const ProjectBanner = ({setDark, dark}) => {
         <div id={linksId} className="contactLinks">
             <a href="https://github.com/gibsoncodes"rel="noopener noreferrer" target="_blank" ><img className="link github" src="images/github.png" alt="linkedin"></img></a>
             <a href="https://www.linkedin.com/in/gibsoncodes/" rel="noopener noreferrer" target="_blank"><img className="link linkedin" src="images/linked.png" alt="linkedin"></img></a>
-            <a href="https://www.linkedin.com/in/gibsoncodes/" rel="noopener noreferrer" target="_blank"><img  className="link resume" src="images/resume.png" alt="linkedin"></img></a>
+            <a href="resumeFinal.pdf" rel="noopener noreferrer" target="_blank"><img  className="link resume" src="images/resume.png" alt="linkedin"></img></a>
         </div>
         </div>
     )
