@@ -35,8 +35,8 @@ const Projects = ({setDark, dark}) => {
             name: "Who's Up",
             image: "images/whosup.png",
             desc: (<p className="proj-desc">Often I find that a simple online search for food at night can be overwhelming. Who's Up puts just the essentials out and could be the difference between getting death glares upon arrival, or just slightly angry glares. Try it out yourself, courtesy of my Google Api key (thus the four mile limit).</p>),
-            live: "https://gibsoncodes.github.io/LawnMOWA/",
-            code: "https://github.com/gibsoncodes/LawnMOWA",
+            live: "https://gibsoncodes.github.io/whosup-deployed/",
+            code: "https://github.com/gibsoncodes/WhosUp",
         }
     ]
     let id = dark ? "dark-body" : null;

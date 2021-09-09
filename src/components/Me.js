@@ -19,6 +19,11 @@ const Me = ({dark}) => {
             </div>
                 </div>
             </div>
+            <div className="mobile-contact">
+                <a href="https://github.com/gibsoncodes"rel="noopener noreferrer" target="_blank" ><img className="link github" src="images/github.png" alt="linkedin"></img></a>
+                <a href="https://www.linkedin.com/in/gibsoncodes/" rel="noopener noreferrer" target="_blank"><img className="link linkedin" src="images/linked.png" alt="linkedin"></img></a>
+                <a href="resumeFinal.pdf" rel="noopener noreferrer" target="_blank"><img  className="link resume" src="images/resume.png" alt="linkedin"></img></a>
+            </div>
             <div className="mobile-skills">
                 <img className="mobile-skill" src="images/tryouts/git.svg" alt="git"></img>
                 <img className="mobile-skill" id="js" src="images/tryouts/js.svg" alt="git"></img>

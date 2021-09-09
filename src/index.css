@@ -422,19 +422,36 @@ a {
     transform: translate(-50%, -50%);
     font-size: 30px;
 }
+.mobile-contact {
+    position: relative;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, 0);
+    display: none;
+    background-color: rgb(128, 125, 125);
+    width: 150px;
+    padding: 6px;
+}
 
 @media (max-width: 900px) {
     .project-name-mobile {
         opacity: 1;
         
     }
+    .mobile-contact {
+        display: block;
+    }
+    .contactLinks {
+        display: none;
+    }
     .projectName {
         display: none;
     }
     .header-title {
         padding-left: 0;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%, 0);
+        font-size: 17px;
     }
     .r-inner {
         display: grid;
