@@ -3,6 +3,7 @@ import React from 'react'
 const Me = ({dark}) => {
     let aboutId = dark ? "dark-me" : null;
     let id = dark ? "dark-body" : null;
+    //
 
     return (
         <div id={id} className="me">
