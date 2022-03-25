@@ -15,7 +15,7 @@ const Projects = ({setDark, dark}) => {
                                             
         },
         {
-            first: true,
+            first: false,
             name: "CRUD Your Socks Off",
             image: "images/socks.png",
             desc: (<p className="proj-desc">Stripes, Checkers, Solids, click the sock and bring your designs to life. Built with handlebars, and mongodb. Future plans include adding user based sign on, allowing a view of personal socks, and everyones! Sock companies, lets get in touch!</p>),
@@ -37,6 +37,14 @@ const Projects = ({setDark, dark}) => {
             desc: (<p className="proj-desc">Often I find that a simple online search for food at night can be overwhelming. Who's Up puts just the essentials out and could be the difference between getting death glares upon arrival, or just slightly angry glares. Try it out yourself, courtesy of my Google Api key (thus the four mile limit).</p>),
             live: "https://gibsoncodes.github.io/whosup-deployed/",
             code: "https://github.com/gibsoncodes/WhosUp",
+        },
+        {
+            first: true,
+            name: "Mentalmania",
+            image: "images/mentalmania.png",
+            desc: (<p className="proj-desc">Serious fun. Just play it.</p>),
+            live: "https://gibsoncodes.github.io/mentalmania",
+            code: "https://github.com/gibsoncodes/mentalmania",
         }
     ]
     let id = dark ? "dark-body" : null;
@@ -44,6 +52,7 @@ const Projects = ({setDark, dark}) => {
     return (
             <div id={id} className="projects">
                 <ProjectBanner dark={dark} setDark={setDark}/>
+                <RightProject dark={dark} project={projectList[4]}/>
                 <RightProject dark={dark} project={projectList[1]}/>
                 <RightProject dark={dark} project={projectList[3]}/>
                 <RightProject dark={dark} project={projectList[0]}/>
